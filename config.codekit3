@@ -57,16 +57,6 @@
 		"oAP": "/comments.php",
 		"oF": 0
 		},
-	"/css/custom-editor-style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/custom-editor-style-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/css/custom-editor-style.min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -84,16 +74,6 @@
 		"oA": 0,
 		"oAP": "/css/custom-editor-style.min.css.map",
 		"oF": 0
-		},
-	"/css/theme.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/theme-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/css/theme.min.css": {
 		"aP": 1,
@@ -363,8 +343,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/theme-min.js",
-		"oF": 0,
+		"oAP": "/js/theme.min.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 0
 		},
@@ -378,318 +358,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"/languages/de_DE.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/de_DE.mo",
-		"oF": 0
-		},
-	"/languages/de_DE.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/de_DE.po",
-		"oF": 0
-		},
-	"/languages/de_DE_formal.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/de_DE_formal.mo",
-		"oF": 0
-		},
-	"/languages/de_DE_formal.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/de_DE_formal.po",
-		"oF": 0
-		},
-	"/languages/el_GR.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/el_GR.mo",
-		"oF": 0
-		},
-	"/languages/el_GR.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/el_GR.po",
-		"oF": 0
-		},
-	"/languages/es_ES.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/es_ES.mo",
-		"oF": 0
-		},
-	"/languages/es_ES.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/es_ES.po",
-		"oF": 0
-		},
-	"/languages/fr_FR.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/fr_FR.mo",
-		"oF": 0
-		},
-	"/languages/fr_FR.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/fr_FR.po",
-		"oF": 0
-		},
-	"/languages/he_IL.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/he_IL.mo",
-		"oF": 0
-		},
-	"/languages/he_IL.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/he_IL.po",
-		"oF": 0
-		},
-	"/languages/it_IT.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/it_IT.mo",
-		"oF": 0
-		},
-	"/languages/it_IT.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/it_IT.po",
-		"oF": 0
-		},
-	"/languages/ja_JP.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/ja_JP.mo",
-		"oF": 0
-		},
-	"/languages/ja_JP.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/ja_JP.po",
-		"oF": 0
-		},
-	"/languages/ko_KR.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/ko_KR.mo",
-		"oF": 0
-		},
-	"/languages/ko_KR.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/ko_KR.po",
-		"oF": 0
-		},
-	"/languages/nb_NO.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/nb_NO.mo",
-		"oF": 0
-		},
-	"/languages/nb_NO.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/nb_NO.po",
-		"oF": 0
-		},
-	"/languages/nl_NL.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/nl_NL.mo",
-		"oF": 0
-		},
-	"/languages/nl_NL.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/nl_NL.po",
-		"oF": 0
-		},
-	"/languages/nn_NO.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/nn_NO.mo",
-		"oF": 0
-		},
-	"/languages/nn_NO.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/nn_NO.po",
-		"oF": 0
-		},
-	"/languages/pl_PL.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/pl_PL.mo",
-		"oF": 0
-		},
-	"/languages/pl_PL.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/pl_PL.po",
-		"oF": 0
-		},
-	"/languages/pt_BR.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/pt_BR.mo",
-		"oF": 0
-		},
-	"/languages/pt_BR.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/pt_BR.po",
-		"oF": 0
-		},
-	"/languages/pt_PT.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/pt_PT.mo",
-		"oF": 0
-		},
-	"/languages/pt_PT.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/pt_PT.po",
-		"oF": 0
-		},
-	"/languages/ru_RU.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/ru_RU.mo",
-		"oF": 0
-		},
-	"/languages/ru_RU.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/ru_RU.po",
-		"oF": 0
-		},
-	"/languages/sl_SI.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/sl_SI.mo",
-		"oF": 0
-		},
-	"/languages/sl_SI.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/sl_SI.po",
-		"oF": 0
-		},
-	"/languages/sv_SE.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/sv_SE.mo",
-		"oF": 0
-		},
-	"/languages/sv_SE.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/sv_SE.po",
-		"oF": 0
-		},
-	"/languages/tr_TR.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/tr_TR.mo",
-		"oF": 0
-		},
-	"/languages/tr_TR.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/tr_TR.po",
-		"oF": 0
-		},
-	"/languages/understrap.pot": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/languages/understrap.pot",
-		"oF": 0
 		},
 	"/LICENSE.md": {
 		"cB": 0,
@@ -889,16 +557,16 @@
 		"uL": 1
 		},
 	"/sass/custom-editor-style.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 0,
+		"ma": 1,
 		"oA": 0,
-		"oAP": "/css/custom-editor-style.css",
+		"oAP": "/css/custom-editor-style.min.css",
 		"oF": 2,
-		"oS": 0,
+		"oS": 3,
 		"uL": 1
 		},
 	"/sass/theme.scss": {
@@ -907,11 +575,11 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 0,
+		"ma": 1,
 		"oA": 0,
-		"oAP": "/css/theme.css",
+		"oAP": "/css/theme.min.css",
 		"oF": 2,
-		"oS": 0,
+		"oS": 3,
 		"uL": 1
 		},
 	"/sass/theme/_contact-form7.scss": {
@@ -962,19 +630,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/sass/understrap/understrap.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/sass/understrap/woocommerce.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/sass/understrap/woocommerce.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1076,8 +731,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/src/js/bootstrap4/bootstrap.bundle-min.js",
-		"oF": 0,
+		"oAP": "/src/js/bootstrap4/bootstrap.bundle.min.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 0
 		},
@@ -1098,8 +753,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/src/js/bootstrap4/bootstrap-min.js",
-		"oF": 0,
+		"oAP": "/src/js/bootstrap4/bootstrap.min.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 0
 		},
