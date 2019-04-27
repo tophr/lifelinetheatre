@@ -28,7 +28,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						<?php understrap_site_info(); ?>
+						&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
 
 					</div><!-- .site-info -->
 
