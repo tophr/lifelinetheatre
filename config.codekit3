@@ -183,6 +183,49 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
+	"/images/lifeline-logo-tagline-rev.png": {
+		"ft": 32768,
+		"iS": 39694,
+		"oA": 0,
+		"oAP": "/images/lifeline-logo-tagline-rev.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/lifeline-logo-tagline.png": {
+		"ft": 32768,
+		"iS": 34688,
+		"oA": 0,
+		"oAP": "/images/lifeline-logo-tagline.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/lifeline-logo.png": {
+		"ft": 32768,
+		"iS": 28360,
+		"oA": 0,
+		"oAP": "/images/lifeline-logo.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/lifeline-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 0,
+		"oAP": "/images/lifeline-logo.svg",
+		"oF": 1,
+		"opt": 1,
+		"plM": 987842478079,
+		"prP": 0
+		},
 	"/inc/class-wp-bootstrap-navwalker.php": {
 		"cB": 0,
 		"ft": 8192,

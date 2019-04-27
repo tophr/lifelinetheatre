@@ -1,4 +1,16 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
-.bg-primary {
-	//background-color: $bg-primary;
+
+#header {
+	padding: 10px 0;
+	background: #000;
+	.custom-logo-link {
+		img {
+			max-height: 130px;
+			width: auto;
+		}
+	}
+}
+
+#main-menu {
+	width: 100%;
 }
