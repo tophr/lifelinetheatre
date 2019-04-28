@@ -240,14 +240,6 @@
 		"oAP": "/inc/deprecated.php",
 		"oF": 0
 		},
-	"/inc/editor.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/inc/editor.php",
-		"oF": 0
-		},
 	"/inc/enqueue.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -505,6 +497,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page.php",
+		"oF": 0
+		},
+	"/README.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.html",
 		"oF": 0
 		},
 	"/README.md": {
