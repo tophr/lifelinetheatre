@@ -712,14 +712,6 @@
 		"oAP": "/sidebar-templates/sidebar-hero.php",
 		"oF": 0
 		},
-	"/sidebar-templates/sidebar-herocanvas.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/sidebar-templates/sidebar-herocanvas.php",
-		"oF": 0
-		},
 	"/sidebar-templates/sidebar-left.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -734,14 +726,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/sidebar-templates/sidebar-right.php",
-		"oF": 0
-		},
-	"/sidebar-templates/sidebar-statichero.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/sidebar-templates/sidebar-statichero.php",
 		"oF": 0
 		},
 	"/sidebar.php": {
