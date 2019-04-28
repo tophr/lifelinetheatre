@@ -134,3 +134,23 @@ if ( ! function_exists( 'understrap_mobile_web_app_meta' ) ) {
 	}
 }
 add_action( 'wp_head', 'understrap_mobile_web_app_meta' );
+
+/*-----------------------------------------------------------------------------------*/
+/*	Custom Login Logo Support
+/*-----------------------------------------------------------------------------------*/
+
+function lt_custom_login_logo() {
+    echo '<style type="text/css">
+        h1 a { background-image:url('.get_template_directory_uri().'/images/lifeline-logo.png) !important; background-size: contain !important; width: 320px !important;  height: 140px !important; }
+    </style>';
+}
+function lt_wp_login_url() {
+    return home_url();
+}
+function lt_wp_login_title() {
+    return get_option('blogname');
+}
+
+add_action('login_head', 'lt_custom_login_logo');
+add_filter('login_headerurl', 'lt_wp_login_url');
+add_filter('login_headertitle', 'lt_wp_login_title');
