@@ -4,6 +4,10 @@
 	max-width: 1400px;
 }
 
+.bg-fade {
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) 100%);
+}
+
 /* HEADER */
 #header {
 	padding: 10px 0;
@@ -13,6 +17,39 @@
 		img {
 			max-height: 130px;
 			width: auto;
+		}
+	}
+}
+
+.header-info {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	.social-links {
+		margin: 0 15px;
+	}
+	.fas, .fab {
+		color: #fff;
+		font-size: 36px;
+		margin: 3px;
+		&:hover {
+			color: $maroon;
+		}
+	}
+	.cta-donate {
+		display: inline-block;
+		width: 150px;
+		text-align: center;
+		color: #fff;
+		line-height: 1.25;
+		&:hover {
+			text-decoration: none;
+		}
+		strong {
+			color: $maroon;
+		}
+		.donate-line-2 {
+			font-size: 12px;
 		}
 	}
 }
@@ -28,6 +65,12 @@
 	background-color: $red;
 }
 
+/* FRONT PAGE */
+
+.home {
+	background: #000;
+	color: #fff;
+}
 
 /* PAGE CONTENT */
 
@@ -37,6 +80,13 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center top;
+	.bg-fade {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 150px;
+	}
 	.container, .container-fluid {
 		position: absolute;
 		right: 0;

@@ -48,12 +48,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 					the_custom_logo();
 				} ?>					
 				</div>
-				<div class="col-sm-8 text-right">
-					<a href="https://boxoffice.diamondticketing.com/lifelinetheatre/events" target="_blank" class="btn btn-primary">Buy Tickets</a>
-					
-					<a href="http://visitor.r20.constantcontact.com/d.jsp?llr=dmdmnpbab&p=oi&m=1101102714243&sit=rvw8sq8ab" target="_blank" title="Join our email list"><i class="fas fa-envelope"></i></a> <a href="http://www.facebook.com/pages/Lifeline-Theatre/55661357652" target="_blank" title="Find us on Facebook!"><i class="fab fa-facebook"></i></a> <a href="http://twitter.com/lifelinetheatre" target="_blank"  title="Follow us on Twitter" ><i class="fab fa-twitter-square"></i></a> <a href="https://boxoffice.printtixusa.com/lifelinetheatre/donate" target="_blank" class="cta-donate">It starts with YOU. Join our family of supporters today!</a>
-					
+				
+				<div class="col-sm-8 text-right header-info">
+					<a href="https://boxoffice.diamondticketing.com/lifelinetheatre/events" target="_blank" class="btn btn-sm btn-primary"><strong>Buy Tickets</strong></a>
+					<div class="social-links">
+						<a href="http://visitor.r20.constantcontact.com/d.jsp?llr=dmdmnpbab&p=oi&m=1101102714243&sit=rvw8sq8ab" target="_blank" title="Join our email list"><i class="fas fa-envelope"></i></a> 
+						<a href="http://www.facebook.com/pages/Lifeline-Theatre/55661357652" target="_blank" title="Find us on Facebook!"><i class="fab fa-facebook"></i></a> <a href="http://twitter.com/lifelinetheatre" target="_blank"  title="Follow us on Twitter" ><i class="fab fa-twitter-square"></i></a> 
+					</div>
+					<a href="https://boxoffice.printtixusa.com/lifelinetheatre/donate" target="_blank" class="cta-donate"><div class="donate-line-1">It starts with <strong>YOU</strong></div><div class="donate-line-2">Join our family of supporters today!</div></a>					
 				</div>
+				
 			</div>
 		</div>
 	</header>
