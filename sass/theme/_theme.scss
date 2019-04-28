@@ -25,3 +25,16 @@
 .navbar-dark .navbar-nav .nav-link:focus {
 	background-color: $red;
 }
+
+#wrapper-footer-full {
+	background: $maroon;
+	color: #fff;
+	a {
+		color: #fff;
+	}
+}
+
+#wrapper-footer {
+	background-color: #000;
+	color: #fff;
+}
