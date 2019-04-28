@@ -63,6 +63,12 @@
 		display: block;
 		padding: 5px 0;
 	}
+	.current_page_item {
+		font-weight: bold;
+		a:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 
