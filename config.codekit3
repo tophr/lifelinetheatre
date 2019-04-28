@@ -159,6 +159,14 @@
 		"oAP": "/functions.php",
 		"oF": 0
 		},
+	"/global-templates/hero-image.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/global-templates/hero-image.php",
+		"oF": 0
+		},
 	"/global-templates/hero.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -523,6 +531,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-templates/right-sidebarpage.php",
+		"oF": 0
+		},
+	"/page-templates/subnav.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-templates/subnav.php",
 		"oF": 0
 		},
 	"/page.php": {

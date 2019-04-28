@@ -1,9 +1,10 @@
 // Custom theme styles go here
 
 .container-fluid {
-	max-width: 1600px;
+	max-width: 1400px;
 }
 
+/* HEADER */
 #header {
 	padding: 10px 0;
 	color: #fff;
@@ -16,6 +17,7 @@
 	}
 }
 
+/* NAVIGATION */
 #main-menu {
 	width: 100%;
 	text-align: center;
@@ -25,6 +27,29 @@
 .navbar-dark .navbar-nav .nav-link:focus {
 	background-color: $red;
 }
+
+
+/* PAGE CONTENT */
+
+.hero-image {
+	height: 380px;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+	.container, .container-fluid {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	h1 {
+		color: #fff;
+	}
+}
+
+
+/* FOOTER */
 
 #wrapper-footer-full {
 	background: $maroon;
