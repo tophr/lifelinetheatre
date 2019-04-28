@@ -25,27 +25,36 @@ $container = get_theme_mod( 'understrap_container_type' );
 <body <?php body_class(); ?>>
 
 <div class="site" id="page">
-
-	<!-- ******************* The Navbar Area ******************* -->
+	
 	<header id="header">
 		<div class="<?php echo esc_attr( $container ); ?>">
-			<!-- Your site title as branding -->
-			<?php if ( ! has_custom_logo() ) { ?>
+			
+			<div class="row">
+				<div class="col-sm-4">
+					<?php if ( ! has_custom_logo() ) { ?>
 
-				<?php if ( is_front_page() && is_home() ) : ?>
+					<?php if ( is_front_page() && is_home() ) : ?>
 
-					<h1 class="mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+						<h1 class="mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
 
-				<?php else : ?>
+					<?php else : ?>
 
-					<a class="" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+						<a class="" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
 
-				<?php endif; ?>
+					<?php endif; ?>
 
 
-			<?php } else {
-				the_custom_logo();
-			} ?><!-- end custom logo -->
+				<?php } else {
+					the_custom_logo();
+				} ?>					
+				</div>
+				<div class="col-sm-8 text-right">
+					<a href="https://boxoffice.diamondticketing.com/lifelinetheatre/events" target="_blank" class="btn btn-primary">Buy Tickets</a>
+					
+					<a href="http://visitor.r20.constantcontact.com/d.jsp?llr=dmdmnpbab&p=oi&m=1101102714243&sit=rvw8sq8ab" target="_blank" title="Join our email list"><i class="fas fa-envelope"></i></a> <a href="http://www.facebook.com/pages/Lifeline-Theatre/55661357652" target="_blank" title="Find us on Facebook!"><i class="fab fa-facebook"></i></a> <a href="http://twitter.com/lifelinetheatre" target="_blank"  title="Follow us on Twitter" ><i class="fab fa-twitter-square"></i></a> <a href="https://boxoffice.printtixusa.com/lifelinetheatre/donate" target="_blank" class="cta-donate">It starts with YOU. Join our family of supporters today!</a>
+					
+				</div>
+			</div>
 		</div>
 	</header>
 	
@@ -55,27 +64,26 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
 
-		<div class="<?php echo esc_attr( $container ); ?>">
+			<div class="<?php echo esc_attr( $container ); ?>">
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-			<!-- The WordPress Menu goes here -->
-			<?php wp_nav_menu(
-				array(
-					'theme_location'  => 'primary',
-					'container_class' => 'collapse navbar-collapse',
-					'container_id'    => 'navbarNavDropdown',
-					'menu_class'      => 'navbar-nav justify-content-between',
-					'fallback_cb'     => '',
-					'menu_id'         => 'main-menu',
-					'depth'           => 2,
-					'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-				)
-			); ?>
-			</div><!-- .container -->			
+				<?php wp_nav_menu(
+					array(
+						'theme_location'  => 'primary',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id'    => 'navbarNavDropdown',
+						'menu_class'      => 'navbar-nav justify-content-between',
+						'fallback_cb'     => '',
+						'menu_id'         => 'main-menu',
+						'depth'           => 2,
+						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+					)
+				); ?>
+			</div>		
 
-		</nav><!-- .site-navigation -->
+		</nav>
 
-	</div><!-- #wrapper-navbar end -->
+	</div>
