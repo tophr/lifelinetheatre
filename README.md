@@ -1,10 +1,8 @@
 # Lifeline Theatre WordPress Theme
 
-## About
-
 Based on Holger Koenemann's UnderStrap WordPress starter theme, a combination of Automattic´s _s theme and Bootstrap 4.
 
-### UnderStrap WordPress Theme Framework
+## UnderStrap WordPress Theme Framework
 
 #### See: [Official Demo](https://understrap.com/understrap) | Read: [Official Docs Page](https://understrap.github.io/)
 
@@ -28,19 +26,6 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 - Contact Form 7 support.
 - [Child Theme](https://github.com/holger1411/understrap-child) ready.
 - Translation ready.
-
-## Starter Theme + HTML Framework = WordPress Theme Framework
-
-The _s theme is a good starting point to develop a WordPress theme. But it is “just” a raw starter theme. That means it outputs all the WordPress stuff correctly but without any layout or design.
-Why not add a well known and supported layout framework to have a solid, clean and responsive foundation? That’s where Bootstrap comes in.
-
-
-## How to Use the Built-In Widget Slider
-
-The front-page slider is widget driven. Simply add more than one widget to widget position “Hero”.
-- Click on Appearance → Widgets.
-- Add two, or more, widgets of any kind to widget area “Hero”.
-- That’s it.
 
 ## Page Templates
 UnderStrap includes several different page template files: (1) blank template, (2) empty template, and (3) full width template.
