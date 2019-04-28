@@ -14,7 +14,14 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
+<?php 
+$rows = get_field('hero_image' ); // get all the rows
+$rand_row = $rows[ array_rand( $rows ) ]; // get a random row
+$rand_row_image = $rand_row['image' ]; // get the sub field value 
+$image = wp_get_attachment_image_src( $rand_row_image['ID'], 'full' );
+?>
+
+<div class="wrapper" id="full-width-page-wrapper" style="background-image: linear-gradient(to right, rgba(0,0,0,0.95) 20%,rgba(0,0,0,0) 100%), url('<?php echo $image[0]; ?>')">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
@@ -26,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 					<?php
 					if( have_rows('mainstage_productions') ): ?>
-						<div class="clearfix">
+						<div class="clearfix home-production-container">
 							<h3>MainStage</h3>
 
 							<?php while ( have_rows('mainstage_productions') ) : the_row();
@@ -37,10 +44,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 								$link = get_sub_field('link');
 								$image = get_sub_field('image'); 
 
-						echo '<div><h4>' . $overline . '</h4>';
+								echo '<h5>' . $overline . '</h5><div class="home-production-box">';
 								echo '<a href="' . $link . '"><img src="' . $image['url'] . '" class="float-left">';
-								echo '<h5>' . $title . '</h5>';
-								echo '<p>' . $dates . '</p></a></div>';
+								echo '<div class="home-production-description"><h4>' . $title . '</h4>';
+								echo '<p>' . $dates . '</p></div></a></div>';
 
 							endwhile;
 
@@ -52,7 +59,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 					<?php
 					if( have_rows('kidseries_productions') ): ?>
-						<div class="clearfix" style="clear: both;">
+						<div class="clearfix home-production-container">
 							<h3>KidSeries</h3>
 
 							<?php while ( have_rows('kidseries_productions') ) : the_row();
@@ -63,10 +70,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 								$link = get_sub_field('link');
 								$image = get_sub_field('image'); 
 
-								echo '<div><h4>' . $overline . '</h4>';
+								echo '<h5>' . $overline . '</h5><div class="home-production-box">';
 								echo '<a href="' . $link . '"><img src="' . $image['url'] . '" class="float-left">';
-								echo '<h5>' . $title . '</h5>';
-								echo '<p>' . $dates . '</p></a></div>';
+								echo '<div class="home-production-description"><h4>' . $title . '</h4>';
+								echo '<p>' . $dates . '</p></div></a></div>';
 
 							endwhile;
 
@@ -76,26 +83,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 					<?php endif; ?>
 					
-					<div class="clearfix" style="clear: both;">
-						<?php the_field('additional_content'); ?>
-					</div>
-						
-					<?php 
-					$rows = get_field('hero_image' ); // get all the rows
-					$rand_row = $rows[ array_rand( $rows ) ]; // get a random row
-					$rand_row_image = $rand_row['image' ]; // get the sub field value 
-					$image = wp_get_attachment_image_src( $rand_row_image['ID'], 'full' );
-					// url = $image[0];
-					// width = $image[1];
-					// height = $image[2];
-					?>
-					<img src="<?php echo $image[0]; ?>" />
+					<div class="entry-content clearfix" style="clear: both;">
+						<?php the_field('additional_content'); ?>															
 
-					<?php while ( have_posts() ) : the_post(); ?>
+						<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php the_content(); ?>
+							<?php the_content(); ?>
 
-					<?php endwhile; // end of the loop. ?>
+						<?php endwhile; // end of the loop. ?>
+					</div>		
 
 				</main><!-- #main -->
 
