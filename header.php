@@ -82,7 +82,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'menu_class'      => 'navbar-nav justify-content-between',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
-						'depth'           => 2,
+						'depth'           => 3,
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>

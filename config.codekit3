@@ -25,6 +25,14 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
+	"/archive-production.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/archive-production.php",
+		"oF": 0
+		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -724,6 +732,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/sidebar.php",
+		"oF": 0
+		},
+	"/single-production.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-production.php",
 		"oF": 0
 		},
 	"/single.php": {
@@ -2004,8 +2020,8 @@
 	"creationDate": 577892359.22173095,
 	"displayValue": "lifelinetheatre",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-karate",
-	"iconImageWasSetByUser": 0
+	"iconImageName": "/images/lifeline-logo-tagline-rev.png",
+	"iconImageWasSetByUser": 1
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

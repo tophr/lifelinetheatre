@@ -7045,3 +7045,53 @@
 		}, false );
 	}
 })();
+
+/**
+ * Custom Theme JS
+ */
+(function($) {
+	
+// Flyout Menus	
+$('#main-menu > .dropdown > .dropdown-menu > .dropdown > a').on("click", function(e) {
+    var submenu = $(this);
+	console.log('this');
+    $('#main-menu > .dropdown > .dropdown-menu > .dropdown > .dropdown-menu').removeClass('show');
+    submenu.next('.dropdown-menu').addClass('show');
+    e.stopPropagation();
+});
+
+$('.dropdown').on("hidden.bs.dropdown", function() {
+	console.log('that');
+    // hide any open menus when parent closes
+    $('.dropdown-menu.show').removeClass('show');
+});
+	
+// Adding hash to tabs	
+$(document).ready(() => {
+  let url = location.href.replace(/\/$/, "");
+ 
+  if (location.hash) {
+    const hash = url.split("#");
+    $('#myTab a[href="#'+hash[1]+'"]').tab("show");
+    url = location.href.replace(/\/#/, "#");
+    history.replaceState(null, null, url);
+    setTimeout(() => {
+      $(window).scrollTop(0);
+    }, 400);
+  } 
+   
+  $('a[data-toggle="tab"]').on("click", function() {
+    let newUrl;
+    const hash = $(this).attr("href");
+    if(hash == "#home") {
+      newUrl = url.split("#")[0];
+    } else {
+      newUrl = url.split("#")[0] + "/" + hash;
+    }
+    //newUrl += "/";
+    history.replaceState(null, null, newUrl);
+  });
+});	
+	
+	
+})( jQuery );	

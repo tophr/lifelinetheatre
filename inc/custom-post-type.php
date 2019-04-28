@@ -102,7 +102,7 @@ function custom_post_production() {
 	// now let's add custom tags (these act like categories)
 	register_taxonomy( 'season', 
 		array('production'), /* if you change the name of register_post_type( 'production', then you have to change this */
-		array('hierarchical' => false,    /* if this is false, it acts like tags */
+		array('hierarchical' => true,    /* if this is false, it acts like tags */
 			'labels' => array(
 				'name'                       => _x( 'Season', 'taxonomy general name', 'understrap' ),
 				'singular_name'              => _x( 'Season', 'taxonomy singular name', 'understrap' ),
@@ -131,6 +131,7 @@ function custom_post_production() {
 		)
 	);
 		
+// https://wordpress.stackexchange.com/questions/108642/permalinks-custom-post-type-custom-taxonomy-post
 function lt_show_permalinks( $post_link, $post ){
     if ( is_object( $post ) && $post->post_type == 'production' ){
         $terms = wp_get_object_terms( $post->ID, 'season' );
