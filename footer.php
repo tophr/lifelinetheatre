@@ -25,10 +25,28 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-12">
 
 				<footer class="site-footer" id="colophon">
+					
+					<?php wp_nav_menu(
+						array(
+							'theme_location'  => 'footer',
+							//'container_class' => 'navbar',
+							//'container_id'    => 'footerNav',
+							//'menu_class'      => 'navbar-nav justify-content-between',
+							'fallback_cb'     => '',
+							'menu_id'         => 'footer-menu',
+							'depth'           => 1,
+							//'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+						)
+					); ?>
 
-					<div class="site-info">
+					<div class="site-info row">
 
-						&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
+						<div class="col-sm-6">
+							&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
+						</div>
+						<div class="col-sm-6 text-right">
+							6912 N Glenwood Ave, Chicago, IL, 60626<br><a href="/news/photos">Photo Credits</a>
+						</div>
 
 					</div><!-- .site-info -->
 

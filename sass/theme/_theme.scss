@@ -33,7 +33,7 @@
 		font-size: 36px;
 		margin: 3px;
 		&:hover {
-			color: $maroon;
+			color: $red;
 		}
 	}
 	.cta-donate {
@@ -130,9 +130,34 @@
 	a {
 		color: #fff;
 	}
+	.header-info {
+		justify-content: center;
+		.btn-primary {
+			border-color: #fff;
+		}
+		.cta-donate {
+			strong {
+				color: #fff;
+			}
+		}
+	}
 }
 
 #wrapper-footer {
 	background-color: #000;
 	color: #fff;
+}
+
+#footer-menu {
+	list-style: none;
+	padding: 0;
+	text-align: center;
+	li {
+		display: inline-block;
+		a {
+			display: block;
+			margin: 10px;
+			color: $paleyellow
+		}
+	}
 }
