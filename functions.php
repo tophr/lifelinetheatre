@@ -14,6 +14,7 @@ $understrap_includes = array(
 	'/setup.php',                           // Theme setup and custom theme supports.
 	'/widgets.php',                         // Register widget area.
 	'/enqueue.php',                         // Enqueue scripts and styles.
+	'/custom-post-type.php',				// Custom post type and taxonomy for productions. 
 	'/template-tags.php',                   // Custom template tags for this theme.
 	'/pagination.php',                      // Custom pagination for this theme.
 	'/extras.php',                          // Custom functions that act independently of the theme templates.

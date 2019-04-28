@@ -224,6 +224,14 @@
 		"oAP": "/inc/custom-header.php",
 		"oF": 0
 		},
+	"/inc/custom-post-type.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/custom-post-type.php",
+		"oF": 0
+		},
 	"/inc/customizer.php": {
 		"cB": 0,
 		"ft": 8192,
