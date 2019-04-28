@@ -1,2 +1,38 @@
 //Add your own editor styles here or comment out the next line if you want to pull in the whole Bootstrap stuff
-//@import "theme"; 
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700');
+@import "theme/theme_variables"; 
+
+body, p {
+	font-family: $font-family-base;
+}
+
+/* Post title width */
+.editor-post-title__block.wp-block {
+	max-width: $content-width;
+
+	/* Post title styling */
+	.editor-post-title__input {
+		font-family: $font-family-base;
+	}
+}
+
+/* Main column width */
+.wp-block {
+    max-width: $content-width;
+
+	/* Wide column width */
+	&[data-align="wide"] {
+		max-width: none;
+
+		/*@include media(">=medium") {
+			max-width: none;
+			margin-left: calc(25vw - 25%);
+			margin-right: calc(25vw - 25%);
+		}*/
+	}
+
+	/* Full column width */
+	&[data-align="full"] {
+		max-width: none;
+	}
+}

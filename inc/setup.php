@@ -95,6 +95,10 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 		
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
+		
+		// Add support for Gutenberg Editor Styles
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'css/custom-editor-style.min.css' );
 
 		// Check and setup theme default settings.
 		understrap_setup_theme_default_settings();
