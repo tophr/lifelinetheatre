@@ -28,9 +28,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<div class="col-md-3 widget-area" id="left-sidebar" role="complementary">
+				<?php get_template_part( 'sidebar-templates/sidebar', 'subnav' ); ?>
+			</div>
 
+			<div class="col-md-9 content-area" id="primary">
+				
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -47,9 +50,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
-
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+				
+			</div>
 
 		</div><!-- .row -->
 
