@@ -1,10 +1,12 @@
+# Lifeline Theatre WordPress Theme
+
 ## About
 
 Based on Holger Koenemann's UnderStrap WordPress starter theme, a combination of Automattic´s _s theme and Bootstrap 4.
 
-#### See: [Official Demo](https://understrap.com/understrap) | Read: [Official Docs Page](https://understrap.github.io/)
+### UnderStrap WordPress Theme Framework
 
-# UnderStrap WordPress Theme Framework
+#### See: [Official Demo](https://understrap.com/understrap) | Read: [Official Docs Page](https://understrap.github.io/)
 
 Website: [https://understrap.com](https://understrap.com)
 
