@@ -160,6 +160,29 @@
 	}
 }
 
+/* SIDEBARS */
+
+.widget {
+	margin-bottom: 30px;
+	h4 {
+		padding-top: 5px;
+		border-top: 3px solid #000;
+		font-size: 1.125rem;
+		text-transform: uppercase;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		li {
+			padding: 5px 0;
+			border-bottom: 1px solid #000;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
 /* SUBNAV */
 
 .subnav {

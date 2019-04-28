@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="entry-content">
 
-		<?php the_excerpt(); ?>
+		<?php the_content(); ?>
 
 		<?php
 		wp_link_pages(
