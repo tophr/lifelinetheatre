@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="<?php echo esc_attr( $container ); ?>">
 			
 			<div class="row">
-				<div class="col-sm-4">
+				<div class="col-sm-4 header-branding">
 					<?php if ( ! has_custom_logo() ) { ?>
 
 					<?php if ( is_front_page() && is_home() ) : ?>

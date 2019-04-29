@@ -305,3 +305,38 @@
 		}
 	}
 }
+
+// Make layout flexible at smaller screens
+@media (min-width: 576px) and (max-width: 991px) {
+	.container {
+		max-width: none;
+	}
+}
+
+@media (max-width: 560px) {
+	.header-branding {
+		text-align: center;
+	}
+	.header-info {
+		justify-content: center;
+	}
+	.site-footer, 
+	.site-footer .text-right {
+		text-align: center !important;
+	}
+}
+
+@media (max-width: 440px) {
+	.header-info .social-links {
+		margin: 0 5px;
+	}
+}
+
+@media (max-width: 420px) {
+	.header-info .social-links {
+		.fas, .fab {
+			font-size: 26px;
+			margin: 3px 1px;
+		}
+	}
+}
