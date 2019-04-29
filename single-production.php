@@ -44,7 +44,9 @@ function cleanName($input) {
 				
 			<main class="site-main" id="main">
 				
-				<?php the_field('date_information'); ?>
+				<div class="production-intro">
+					<?php the_field('date_information'); ?>
+				</div>			
 				
 				<?php
 				// check if the flexible content field has rows of data
@@ -92,7 +94,9 @@ function cleanName($input) {
 
 					endwhile;
 				
-					echo '</ul>';
+					echo '<li class="nav-item">
+						<a class="nav-link" id="accessibility-tab" href="/productions/accessibility/">Accessibility</a>
+					  </li></ul>';
 
 				else :
 
@@ -151,8 +155,8 @@ function cleanName($input) {
 										$bio = get_sub_field('bio');
 										$image = get_sub_field('headshot');
 
-										echo '<li><img src="' . $image['url'] . '" alt="' . $image['alt'] . '" class="float-left" />';
-										echo '<h3>' . $name . ' <span style="title">(' . $title . ')</span></h3>';
+										echo '<li><img src="' . $image['url'] . '" alt="' . $image['alt'] . '" class="headshot float-left" />';
+										echo '<h3>' . $name . ' <span class="title">(' . $title . ')</span></h3>';
 										echo $bio;
 										echo '</li>';
 
@@ -194,11 +198,6 @@ function cleanName($input) {
 				endif;
 
 				?>
-				
-				
-			 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">HAY</div>			
-			
-				
 				
 			</main><!-- #main -->
 				

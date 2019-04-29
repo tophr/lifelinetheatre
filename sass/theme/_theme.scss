@@ -71,7 +71,7 @@
 
 .navbar-dark .navbar-nav .nav-link:hover, 
 .navbar-dark .navbar-nav .nav-link:focus {
-	background-color: $red;
+	background: linear-gradient(to bottom, rgba($maroon, 1) 0%, rgba($red, 1) 100%); //$red;
 }
 
 /* FRONT PAGE */
@@ -212,6 +212,49 @@
 		a:hover {
 			text-decoration: none;
 		}
+	}
+}
+
+/* PRODUCTION TEMPLATE */
+
+.single-production {
+	.tab-pane {
+		padding: 30px 0;
+	}
+}
+
+.production-intro {
+	margin-bottom: 30px;
+	h4 {
+		font-size: 1.125rem;
+		font-weight: 400;
+		.style2 {
+			font-size: 1.75rem;
+			font-weight: 700;
+		}
+	}
+}
+
+#cast-crew {
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	li {
+		margin-bottom: 30px;
+	}
+	.headshot {
+		width: 150px;
+		height: auto;
+		margin: 0 30px 10px 0;
+	}
+	h3 {
+		margin: 0;
+		font-size: 1.25rem;
+	}
+	.title {
+		font-size: 1rem;
+		font-weight: 400;
 	}
 }
 
