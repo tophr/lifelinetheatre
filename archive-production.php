@@ -84,8 +84,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 						setup_postdata($post); // setup post data to use the Post template tags. ?>
 
 						<div id="post-<?php the_ID(); ?>">
+							
+							<?php 
+							$venue = get_field('venue', $post->id); 
+							$world_premiere = get_field('world_premiere', $post->id); 
+							//var_dump($world_premiere);
+							?>
 
-						   <h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+						   <h3 class="entry-title">
+							   <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php if ($world_premiere == 'adaptation') { echo '*'; } else if ($world_premiere == 'work') { echo '**'; }; ?>
+							</h3>
 
 						</div><!-- #post -->
 					<?php endforeach; wp_reset_postdata(); ?>
