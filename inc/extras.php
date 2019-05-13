@@ -153,4 +153,4 @@ function lt_wp_login_title() {
 
 add_action('login_head', 'lt_custom_login_logo');
 add_filter('login_headerurl', 'lt_wp_login_url');
-add_filter('login_headertitle', 'lt_wp_login_title');
+add_filter('login_headertext', 'lt_wp_login_title');
