@@ -44,10 +44,14 @@ $image = wp_get_attachment_image_src( $rand_row_image['ID'], 'full' );
 								$link = get_sub_field('link');
 								$image = get_sub_field('image'); 
 
-								echo '<h5>' . $overline . '</h5><div class="home-production-box">';
-								echo '<a href="' . $link . '"><img src="' . $image['url'] . '" class="float-left">';
+								if ($overline) { echo '<h5>' . $overline . '</h5>'; };
+								echo '<div class="home-production-box">';
+								if ($link) { echo '<a href="' . $link['url'] . '">'; };
+								if ($image) { echo '<img src="' . $image['url'] . '" class="float-left">'; };
 								echo '<div class="home-production-description"><h4>' . $title . '</h4>';
-								echo '<p>' . $dates . '</p></div></a></div>';
+								echo '<p>' . $dates . '</p></div>';
+								if ($link) { echo '</a>'; };
+								echo '</div>';
 
 							endwhile;
 
@@ -70,10 +74,14 @@ $image = wp_get_attachment_image_src( $rand_row_image['ID'], 'full' );
 								$link = get_sub_field('link');
 								$image = get_sub_field('image'); 
 
-								echo '<h5>' . $overline . '</h5><div class="home-production-box">';
-								echo '<a href="' . $link . '"><img src="' . $image['url'] . '" class="float-left">';
+								if ($overline) { echo '<h5>' . $overline . '</h5>'; };
+								echo '<div class="home-production-box">';
+								if ($link) { echo '<a href="' . $link['url'] . '">'; };
+								if ($image) { echo '<img src="' . $image['url'] . '" class="float-left">'; };
 								echo '<div class="home-production-description"><h4>' . $title . '</h4>';
-								echo '<p>' . $dates . '</p></div></a></div>';
+								echo '<p>' . $dates . '</p></div>';
+								if ($link) { echo '</a>'; };
+								echo '</div>';
 
 							endwhile;
 
