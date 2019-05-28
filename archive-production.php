@@ -52,10 +52,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 					foreach ( $categories as $category ) {
 						?>
 
-					<div id="content">
-						<h2 class="archive-production-year">
-							<?php echo $category->name; ?>
-						</h2>
+					<div class="archive-production-year">
+					<div class="row">
+						
+						<div class="col-sm-3">
+							<h2 class="">
+								<?php echo $category->name; ?>
+							</h2>
+						</div>	
 
 						<?php
 						global $post; // Access the global $post object.
@@ -71,7 +75,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						) );
 						?>
 
-						<div id='archive-content'>
+						<div class='archive-content col-sm-9'>
+						
 
 							<?php
 							$productions = array();
@@ -84,31 +89,35 @@ $container = get_theme_mod( 'understrap_container_type' );
 							wp_reset_query();
 
 							foreach ( $productions as $production => $venue_title ) {
-								?>
-							<h2 class="archive-venue-name">
-								<?php echo esc_html($production); ?>
-							</h2>
-							<?php
-							foreach ( $venue_title as $listing => $single_listing ) {
-								setup_postdata( $single_listing );
-								$post_id = $single_listing->ID;
-								$title = get_the_title( $post_id );
-								$link = get_the_permalink( $post_id );
-								$world_premiere = get_field( 'world_premiere', $post_id );
-								?>
-							<h3 class="entry-title">
-								<a href="<?php echo $link; ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php echo $title; ?></a><?php if ($world_premiere == 'adaptation') { echo '*'; } else if ($world_premiere == 'work') { echo '**'; }; ?>
-								</h3>
-						
-							<?php
-							}
-							wp_reset_postdata();
-							}
+								?>	
+							<div class="row archive-venue-row">
+								<div class="col-sm-3">
+									<h3 class="archive-venue-name">
+										<?php echo esc_html($production); ?>
+									</h3>
+								</div>
+								<div class="col-sm-9">
+								<?php
+								foreach ( $venue_title as $listing => $single_listing ) {
+									setup_postdata( $single_listing );
+									$post_id = $single_listing->ID;
+									$title = get_the_title( $post_id );
+									$link = get_the_permalink( $post_id );
+									$world_premiere = get_field( 'world_premiere', $post_id );
+									?>
+								<h4 class="entry-title">
+									<a href="<?php echo $link; ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php echo $title; ?></a><?php if ($world_premiere == 'adaptation') { echo '*'; } else if ($world_premiere == 'work') { echo '**'; }; ?>
+								</h4>
+
+								<?php
+								}
+								wp_reset_postdata(); ?>
+								</div></div>
+								
+							<?php }
 							?>
 
-						</div>
-
-					</div>
+							</div>				</div></div>	
 					
 					<?php } // foreach( $categories as $category ) ; ?>
 
