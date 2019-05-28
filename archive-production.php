@@ -120,6 +120,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>				</div></div>	
 					
 					<?php } // foreach( $categories as $category ) ; ?>
+					
+					<p>*World premiere of Original Literary Adaptation<br> **World premiere of Original Work</p>
 
 				</main>
 
