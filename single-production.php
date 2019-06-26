@@ -151,7 +151,10 @@ function cleanName($input) {
 											$bio = get_sub_field('bio');
 											$image = get_sub_field('headshot');
 
-											echo '<li><img src="' . $image['url'] . '" alt="' . $image['alt'] . '" class="headshot float-left" />';
+											echo '<li>';
+											if ($image) {
+												echo '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" class="headshot float-left" />';
+											}
 											echo '<h3>' . $name . ' <span class="title">(' . $title . ')</span></h3>';
 											echo $bio;
 											echo '</li>';
