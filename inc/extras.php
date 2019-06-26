@@ -135,6 +135,27 @@ if ( ! function_exists( 'understrap_mobile_web_app_meta' ) ) {
 }
 add_action( 'wp_head', 'understrap_mobile_web_app_meta' );
 
+/* ACF Blocks */
+function register_acf_block_types() {
+
+    // register a testimonial block.
+    acf_register_block_type(array(
+        'name'              => 'bio',
+        'title'             => __('Bio'),
+        'description'       => __('A custom bio block featuring a name, title, and headshot.'),
+        'render_template'   => 'inc/blocks/bio.php',
+        'category'          => 'formatting',
+        'icon'              => 'admin-comments',
+        'keywords'          => array( 'bio', 'biography', 'headshot' ),
+    ));
+}
+
+// Check if function exists and hook into setup.
+if( function_exists('acf_register_block_type') ) {
+    add_action('acf/init', 'register_acf_block_types');
+}
+
+
 /*-----------------------------------------------------------------------------------*/
 /*	Custom Login Logo Support
 /*-----------------------------------------------------------------------------------*/
