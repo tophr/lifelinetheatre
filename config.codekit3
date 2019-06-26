@@ -710,6 +710,14 @@
 		"oAP": "/sidebar-templates/sidebar-left.php",
 		"oF": 0
 		},
+	"/sidebar-templates/sidebar-production.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/sidebar-templates/sidebar-production.php",
+		"oF": 0
+		},
 	"/sidebar-templates/sidebar-right.php": {
 		"cB": 0,
 		"ft": 8192,

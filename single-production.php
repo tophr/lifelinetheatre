@@ -36,172 +36,173 @@ function cleanName($input) {
 
 		<div class="row">
 
-			<div class="col-md-3 widget-area" id="left-sidebar" role="complementary">
-				<?php get_template_part( 'sidebar-templates/sidebar', 'subnav' ); ?>
-			</div>
-
-			<div class="col-md-9 content-area" id="primary">
+			<div class="col-md-9 order-2 content-area" id="primary">
 				
-			<main class="site-main" id="main">
-				
-				<div class="production-intro">
-					<?php the_field('date_information'); ?>
-				</div>			
-				
-				<?php
-				// check if the flexible content field has rows of data
-				if( have_rows('production_content') ):
+				<main class="site-main" id="main">
 
-					echo '<ul class="nav nav-tabs" id="myTab" role="tablist"> <li class="nav-item">
-						<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-					  </li>';
-				
-					// loop through the rows of data
-					while ( have_rows('production_content') ) : the_row();
+					<div class="production-intro">
+						<?php the_field('date_information'); ?>
+					</div>			
 
-						// check current row layout
-						if( get_row_layout() == 'content' ):
+					<?php
+					// check if the flexible content field has rows of data
+					if( have_rows('production_content') ):
 
-							$slug = cleanName(get_sub_field('title'));
-						
-							echo '<li class="nav-item">
-								<a class="nav-link" id="' . $slug . '-tab" data-toggle="tab" href="#' . $slug . '" role="tab" aria-controls="' . $slug . '">' . get_sub_field('title') . '</a>
-							  </li>';
+						echo '<ul class="nav nav-tabs" id="myTab" role="tablist"> <li class="nav-item">
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+						  </li>';
 
-						endif;
+						// loop through the rows of data
+						while ( have_rows('production_content') ) : the_row();
 
-						// check current row layout
-						if( get_row_layout() == 'cast_crew' ):
+							// check current row layout
+							if( get_row_layout() == 'content' ):
 
-							echo '<li class="nav-item">
-									<a class="nav-link" id="cast-crew-tab" data-toggle="tab" href="#cast-crew" role="tab" aria-controls="cast-crew" aria-selected="false">Cast &amp; Crew</a>
+								$slug = cleanName(get_sub_field('title'));
+
+								echo '<li class="nav-item">
+									<a class="nav-link" id="' . $slug . '-tab" data-toggle="tab" href="#' . $slug . '" role="tab" aria-controls="' . $slug . '">' . get_sub_field('title') . '</a>
 								  </li>';
 
-						endif;					
+							endif;
 
-						// check current row layout
-						if( get_row_layout() == 'link' ):
+							// check current row layout
+							if( get_row_layout() == 'cast_crew' ):
 
-							$slug = cleanName(get_sub_field('title'));
+								echo '<li class="nav-item">
+										<a class="nav-link" id="cast-crew-tab" data-toggle="tab" href="#cast-crew" role="tab" aria-controls="cast-crew" aria-selected="false">Cast &amp; Crew</a>
+									  </li>';
 
-							$link = get_sub_field('link');
-						
-							echo '<li class="nav-item">
-								<a class="nav-link" id="' . $slug . '-tab" href="' . $link['url'] . '">' . get_sub_field('title') . '</a>
-							  </li>';
+							endif;					
 
-						endif;
+							// check current row layout
+							if( get_row_layout() == 'link' ):
 
-					endwhile;
-				
-					echo '<li class="nav-item">
-						<a class="nav-link" id="accessibility-tab" href="/productions/accessibility/">Accessibility</a>
-					  </li></ul>';
+								$slug = cleanName(get_sub_field('title'));
 
-				else :
+								$link = get_sub_field('link');
 
-					// no layouts found
+								echo '<li class="nav-item">
+									<a class="nav-link" id="' . $slug . '-tab" href="' . $link['url'] . '">' . get_sub_field('title') . '</a>
+								  </li>';
 
-				endif;
+							endif;
 
-				?>
-								
-				<?php
-				// check if the flexible content field has rows of data
-				if( have_rows('production_content') ):
+						endwhile;
 
-					echo '<div class="tab-content" id="myTabContent">';
-					echo '<div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">';
-				
+						echo '<li class="nav-item">
+							<a class="nav-link" id="accessibility-tab" href="/productions/accessibility/">Accessibility</a>
+						  </li></ul>';
+
+					else :
+
+						// no layouts found
+
+					endif;
+
+					?>
+
+					<?php
+					// check if the flexible content field has rows of data
+					if( have_rows('production_content') ):
+
+						echo '<div class="tab-content" id="myTabContent">';
+						echo '<div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">';
+
+							while ( have_posts() ) : the_post(); 
+
+								get_template_part( 'loop-templates/content', 'page' ); 					
+
+							endwhile; // end of the loop. 
+
+						echo '</div>';
+
+						// loop through the rows of data
+						while ( have_rows('production_content') ) : the_row();
+
+							// check current row layout
+							if( get_row_layout() == 'content' ):
+
+								$slug = cleanName(get_sub_field('title'));
+
+								echo '<div class="tab-pane fade" id="' . $slug . '" role="tabpanel" aria-labelledby="' . $slug . '-tab">';
+
+									the_sub_field('content');
+
+								echo '</div>';
+
+							endif;
+
+							// check current row layout
+							if( get_row_layout() == 'cast_crew' ):
+
+								echo '<div class="tab-pane fade" id="cast-crew" role="tabpanel" aria-labelledby="cast-crew-tab">';
+
+									// check if the nested repeater field has rows of data
+									if( have_rows('cast_member') ):
+
+										echo '<ul>';
+
+										// loop through the rows of data
+										while ( have_rows('cast_member') ) : the_row();
+
+											$name = get_sub_field('name');
+											$title = get_sub_field('title');
+											$bio = get_sub_field('bio');
+											$image = get_sub_field('headshot');
+
+											echo '<li><img src="' . $image['url'] . '" alt="' . $image['alt'] . '" class="headshot float-left" />';
+											echo '<h3>' . $name . ' <span class="title">(' . $title . ')</span></h3>';
+											echo $bio;
+											echo '</li>';
+
+										endwhile;
+
+										echo '</ul>';
+
+									endif;
+
+								echo '</div>';
+
+							endif;					
+
+							// check current row layout
+							if( get_row_layout() == 'link' ):
+
+								$slug = cleanName(get_sub_field('title'));
+
+								echo '<div class="tab-pane fade" id="' . $slug . '" role="tabpanel" aria-labelledby="' . $slug . '-tab">';
+
+									the_sub_field('link');
+
+								echo '</div>';
+
+							endif;
+
+						endwhile;
+
+						echo '</div>';
+
+					else :
+
 						while ( have_posts() ) : the_post(); 
 
 							get_template_part( 'loop-templates/content', 'page' ); 					
 
 						endwhile; // end of the loop. 
+
+					endif;
+
+					?>
+
+				</main><!-- #main -->
 				
-					echo '</div>';
-				
-					// loop through the rows of data
-					while ( have_rows('production_content') ) : the_row();
-
-						// check current row layout
-						if( get_row_layout() == 'content' ):
-
-							$slug = cleanName(get_sub_field('title'));
-				
-							echo '<div class="tab-pane fade" id="' . $slug . '" role="tabpanel" aria-labelledby="' . $slug . '-tab">';
-
-								the_sub_field('content');
-				
-							echo '</div>';
-
-						endif;
-
-						// check current row layout
-						if( get_row_layout() == 'cast_crew' ):
-								
-							echo '<div class="tab-pane fade" id="cast-crew" role="tabpanel" aria-labelledby="cast-crew-tab">';
-
-								// check if the nested repeater field has rows of data
-								if( have_rows('cast_member') ):
-
-									echo '<ul>';
-
-									// loop through the rows of data
-									while ( have_rows('cast_member') ) : the_row();
-
-										$name = get_sub_field('name');
-										$title = get_sub_field('title');
-										$bio = get_sub_field('bio');
-										$image = get_sub_field('headshot');
-
-										echo '<li><img src="' . $image['url'] . '" alt="' . $image['alt'] . '" class="headshot float-left" />';
-										echo '<h3>' . $name . ' <span class="title">(' . $title . ')</span></h3>';
-										echo $bio;
-										echo '</li>';
-
-									endwhile;
-
-									echo '</ul>';
-
-								endif;
-				
-							echo '</div>';
-
-						endif;					
-
-						// check current row layout
-						if( get_row_layout() == 'link' ):
-
-							$slug = cleanName(get_sub_field('title'));
-				
-							echo '<div class="tab-pane fade" id="' . $slug . '" role="tabpanel" aria-labelledby="' . $slug . '-tab">';
-
-								the_sub_field('link');
-				
-							echo '</div>';
-
-						endif;
-
-					endwhile;
-				
-					echo '</div>';
-
-				else :
-
-					while ( have_posts() ) : the_post(); 
-
-						get_template_part( 'loop-templates/content', 'page' ); 					
-
-					endwhile; // end of the loop. 
-
-				endif;
-
-				?>
-				
-			</main><!-- #main -->
-				
+			</div>			
+			
+			<div class="col-md-3 order-1 widget-area" id="left-sidebar" role="complementary">
+				<?php get_template_part( 'sidebar-templates/sidebar', 'production' ); ?>
 			</div>
+
 
 		</div><!-- .row -->
 
