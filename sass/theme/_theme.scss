@@ -78,11 +78,28 @@
 	background: linear-gradient(to bottom, rgba($maroon, 1) 0%, rgba($red, 1) 100%); //$red;
 }
 
+@media (max-width: 767px) {
+	.navbar {
+		.container {
+			text-align: right;
+			display: block;
+			padding: 10px;
+		}
+	}
+	.navbar-dark .navbar-toggler {
+		border-color: #fff;
+	}
+}
+
+
 /* FRONT PAGE */
 
 .home {
 	background: #000;
 	color: #fff;
+	#content {
+		min-height: calc(100vh - 359px);
+	}
 	#full-width-page-wrapper {
 		padding: 0;
 		background-repeat: no-repeat;
