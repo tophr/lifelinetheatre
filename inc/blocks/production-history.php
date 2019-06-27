@@ -21,19 +21,61 @@ if ( !empty( $block[ 'classname' ] ) ) {
 	$classname .= ' ' . $block[ 'classname' ];
 }
 
-// Load values and assing defaults.
-$text = get_field( 'year' ) ? : 'Year';
-$name = get_field( 'venue' ) ? : 'Venue';
-$title = get_field( 'title' );
-$image = get_field( 'headshot' );
+// Load values and assign defaults.
+$year = get_field( 'year' ) ? : 'Year';
+$venue = get_field( 'venue' ) ? : 'Venue';
 
 ?>
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classname); ?>-row">
-	<div class="prod-history-image">
-		<img src="<?php echo $image['url']; ?>" alt="" class="headshot" />
+
+<?php if( have_rows($venue) ): ?>
+
+	<div id="<?php echo esc_attr($id); ?>" class="row <?php echo esc_attr($classname); ?>-row">
+						
+		<div class="col-sm-3">
+			<h2 class="">
+				<?php echo $year; ?>
+			</h2>
+		</div>	
+		<div class='archive-content col-sm-9'>
+
+	<?php while( have_rows($venue) ): the_row(); 
+
+		// vars
+		$venue_name = get_sub_field('venue_name');
+		$production = get_sub_field('production');
+		$season_award = get_sub_field('season_award');
+		?>
+
+		<div class="row archive-venue-row">
+			<div class="col-sm-3">
+				<h3 class="archive-venue-name">
+					<?php echo $venue_name; ?>
+				</h3>
+			</div>
+			<div class="col-sm-9">
+			<?php if( have_rows($production) ): ?>	
+				<?php
+				while( have_rows($production) ): the_row(); 
+					$title = get_sub_field( 'title' );
+					$awards = get_sub_field( 'awards' );
+					$world_premiere = get_sub_field( 'world_premiere' );
+					?>
+				<h4 class="entry-title">
+					<?php echo $title; ?><?php if ($world_premiere == 'adaptation') { echo '*'; } else if ($world_premiere == 'work') { echo '**'; }; ?>
+				</h4>
+				
+				<?php if ($awards) {  echo $awards; }; ?>
+
+				<?php endwhile; ?>
+			<?php endif; ?>	
+			</div>
+			<?php echo $season_award; ?>
+		</div>
+
+	<?php endwhile; ?>
+			
+		</div>
 	</div>
-	<div class="prod-history-content"> 
-		<h3 classs="prod-history-name"><?php echo $name; ?> <?php if ($title) { ?><span class="title">(<?php echo $title; ?>)</span><?php }; ?></h3> 
-		<div class="prod-history-content"><?php echo $text; ?></div>
-	</div>	
-</div>
+
+<?php endif; ?>
+
