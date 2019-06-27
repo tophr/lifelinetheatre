@@ -23,59 +23,64 @@ if ( !empty( $block[ 'classname' ] ) ) {
 
 // Load values and assign defaults.
 $year = get_field( 'year' ) ? : 'Year';
-$venue = get_field( 'venue' ) ? : 'Venue';
-
+$venue = 'venue';
+$season_award = get_field('season_award');
 ?>
 
-<?php if( have_rows($venue) ): ?>
-
+<div class="archive-production-year">
 	<div id="<?php echo esc_attr($id); ?>" class="row <?php echo esc_attr($classname); ?>-row">
-						
+
 		<div class="col-sm-3">
 			<h2 class="">
 				<?php echo $year; ?>
 			</h2>
 		</div>	
-		<div class='archive-content col-sm-9'>
 
-	<?php while( have_rows($venue) ): the_row(); 
+		<?php if( have_rows($venue) ): ?>
 
-		// vars
-		$venue_name = get_sub_field('venue_name');
-		$production = get_sub_field('production');
-		$season_award = get_sub_field('season_award');
-		?>
+			<div class='archive-content col-sm-9'>
+				<?php while( have_rows($venue) ): the_row(); 
 
-		<div class="row archive-venue-row">
-			<div class="col-sm-3">
-				<h3 class="archive-venue-name">
-					<?php echo $venue_name; ?>
-				</h3>
-			</div>
-			<div class="col-sm-9">
-			<?php if( have_rows($production) ): ?>	
-				<?php
-				while( have_rows($production) ): the_row(); 
-					$title = get_sub_field( 'title' );
-					$awards = get_sub_field( 'awards' );
-					$world_premiere = get_sub_field( 'world_premiere' );
+					// vars
+					$venue_name = get_sub_field('venue_name');
+					$production = 'production';
+					
 					?>
-				<h4 class="entry-title">
-					<?php echo $title; ?><?php if ($world_premiere == 'adaptation') { echo '*'; } else if ($world_premiere == 'work') { echo '**'; }; ?>
-				</h4>
-				
-				<?php if ($awards) {  echo $awards; }; ?>
+
+					<div class="row archive-venue-row">
+						<div class="col-sm-3">
+							<h3 class="archive-venue-name">
+								<?php echo $venue_name; ?>
+							</h3>
+						</div>
+						<div class="col-sm-9">
+						<?php if( have_rows($production) ): ?>	
+							<?php
+							while( have_rows($production) ): the_row(); 
+								$title = get_sub_field( 'title' );
+								$awards = get_sub_field( 'awards' );
+								$world_premiere = get_sub_field( 'world_premiere' );
+								?>
+							<h4 class="entry-title">
+								<?php echo $title; ?><?php if ($world_premiere == 'adaptation') { echo '*'; } else if ($world_premiere == 'work') { echo '**'; }; ?>
+							</h4>
+
+							<?php if ($awards) {  echo $awards; }; ?>
+
+							<?php endwhile; ?>
+						<?php endif; ?>	
+						</div>
+						
+					</div>
 
 				<?php endwhile; ?>
-			<?php endif; ?>	
+				
+				<?php echo $season_award; ?>
+				
 			</div>
-			<?php echo $season_award; ?>
-		</div>
 
-	<?php endwhile; ?>
-			
-		</div>
+		<?php endif; ?>
+
 	</div>
-
-<?php endif; ?>
+</div>	
 
