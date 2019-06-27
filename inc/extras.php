@@ -138,7 +138,7 @@ add_action( 'wp_head', 'understrap_mobile_web_app_meta' );
 /* ACF Blocks */
 function register_acf_block_types() {
 
-    // register a testimonial block.
+    // register the bio block.
     acf_register_block_type(array(
         'name'              => 'bio',
         'title'             => __('Bio'),
@@ -147,6 +147,17 @@ function register_acf_block_types() {
         'category'          => 'formatting',
         'icon'              => 'admin-comments',
         'keywords'          => array( 'bio', 'biography', 'headshot' ),
+    ));
+	
+	 // register the production history block.
+    acf_register_block_type(array(
+        'name'              => 'production-history',
+        'title'             => __('Production History'),
+        'description'       => __('A custom production history block featuring a season and performance details.'),
+        'render_template'   => 'inc/blocks/production-history.php',
+        'category'          => 'formatting',
+        'icon'              => 'admin-comments',
+        'keywords'          => array( 'production', 'history', 'performance' ),
     ));
 }
 
