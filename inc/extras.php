@@ -145,7 +145,7 @@ function register_acf_block_types() {
         'description'       => __('A custom bio block featuring a name, title, and headshot.'),
         'render_template'   => 'inc/blocks/bio.php',
         'category'          => 'formatting',
-        'icon'              => 'dashicons-id',
+        'icon'              => 'id',
         'keywords'          => array( 'bio', 'biography', 'headshot' ),
     ));
 	
@@ -156,7 +156,7 @@ function register_acf_block_types() {
         'description'       => __('A custom production history block featuring a season and performance details.'),
         'render_template'   => 'inc/blocks/production-history.php',
         'category'          => 'formatting',
-        'icon'              => 'dashicons-excerpt-view',
+        'icon'              => 'excerpt-view',
         'keywords'          => array( 'production', 'history', 'performance' ),
     ));
 }
