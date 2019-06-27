@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			wp_list_pages( array(
 				 'title_li' => '',
 				 'child_of' => $current_page_parent,
-				 'depth' => '2' )
+				 'depth' => '1' )
 			);
 	
 			//$parentId = $post->post_parent;
