@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<div class="col-md-9 order-md-2 content-area" id="primary">
+			<div class="col-md-9 order-md-last content-area" id="primary">
 
 				<main class="site-main" id="main">
 
@@ -124,7 +124,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</div>
 			
-			<div class="col-md-3 order-md-1 widget-area" id="left-sidebar" role="complementary">
+			<div class="col-md-3 order-md-first widget-area" id="left-sidebar" role="complementary">
 				<?php get_template_part( 'sidebar-templates/sidebar', 'subnav' ); ?>
 			</div>
 
