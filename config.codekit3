@@ -491,6 +491,14 @@
 		"oAP": "/page-templates/empty.php",
 		"oF": 0
 		},
+	"/page-templates/featured-season.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-templates/featured-season.php",
+		"oF": 0
+		},
 	"/page-templates/fullwidthpage.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -505,6 +513,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-templates/left-sidebarpage.php",
+		"oF": 0
+		},
+	"/page-templates/productions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-templates/productions.php",
 		"oF": 0
 		},
 	"/page-templates/right-sidebarpage.php": {
