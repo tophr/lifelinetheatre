@@ -32,22 +32,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 			echo '<li class="page_item parent_page"><a href="' . esc_url( get_permalink( $post->post_parent ) ) . '" alt="' . esc_attr( $parent_title ) . '">' . $parent_title . '</a>';
 			
-			$current_page_parent = ( $post->post_parent ? $post->post_parent : $post->ID );
+			$current_page_parent = ( $post->post_parent ? $post->post_parent : $post->ID );		
 	
+			$walker = new ACF_Title_Custom_Walker();
+			
 			wp_list_pages( array(
 				 'title_li' => '',
 				 'child_of' => $current_page_parent,
-				 'depth' => '1' )
+				 'depth' => '1',
+				 'walker' => $walker, 
+			)
 			);
-	
-			//$parentId = $post->post_parent;
-			//$linkToParent = get_permalink($parentId);	
-			//echo '<li><a href="' . $linkToParent . '">' . $parentId . '</a></li>';
 			
-			/*$parent_title = get_the_title( $post->post_parent );
-			if ( $parent_title != the_title( ' ', ' ', false ) ) {
-				echo '<li><a href="' . esc_url( get_permalink( $post->post_parent ) ) . '" alt="' . esc_attr( $parent_title ) . '">' . $parent_title . '</a><ul class="children manual">';
-			}*/
 			
 		} else {
 			global $post;
@@ -57,16 +53,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 			$current_page_parent = ( $post->post_parent ? $post->post_parent : $post->ID );
 			
+			$walker = new ACF_Title_Custom_Walker();
 			wp_list_pages( array(
 				 'title_li' => '',
 				 'child_of' => $post->ID,
-				 'depth' => '2' )
+				 'depth' => '1',
+				 'walker' => $walker, )
 			);
 		}
 	
-		if (!$kids) { 
-			//echo '</ul></li>';
-		}	
 		
 	?>		
 	</ul>	

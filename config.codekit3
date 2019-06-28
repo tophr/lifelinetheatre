@@ -507,14 +507,6 @@
 		"oAP": "/page-templates/left-sidebarpage.php",
 		"oF": 0
 		},
-	"/page-templates/productions.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/page-templates/productions.php",
-		"oF": 0
-		},
 	"/page-templates/right-sidebarpage.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -537,6 +529,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page.php",
+		"oF": 0
+		},
+	"/README.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.html",
 		"oF": 0
 		},
 	"/README.md": {
