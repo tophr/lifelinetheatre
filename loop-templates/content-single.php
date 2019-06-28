@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
 
 	<div class="entry-content">
 

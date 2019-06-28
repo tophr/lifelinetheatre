@@ -374,6 +374,44 @@
 	margin-top: 20px;
 }
 
+
+/* BLOG */
+.hfeed {
+	.hentry {
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 2px solid #000;
+	}
+	.entry-title {
+		margin-bottom: 0;
+	}
+	.entry-meta {
+		margin-bottom: 10px;
+		color: #666;
+	}
+	.wp-post-image {
+		margin-bottom: 15px;
+	}
+	.entry-footer {
+		color: #666;
+	}	
+}
+
+.single-post {
+	.entry-title {
+		margin-bottom: 0;
+	}
+	.entry-meta, .entry-footer {
+		color: #666;
+	}
+	.entry-meta {
+		margin-bottom: 20px;
+	}
+	.wp-post-image {
+		margin-bottom: 20px;
+	}
+}
+
 /* FOOTER */
 
 #wrapper-footer-full {
