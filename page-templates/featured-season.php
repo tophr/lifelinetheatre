@@ -96,13 +96,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 									?>
 									<div class="col-sm-4">
 										<div class="production-box">
+											<a href="<?php echo $link; ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 											<h4 class="entry-title">
-												<a href="<?php echo $link; ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php echo $title; ?></a>
+												<?php echo $title; ?>
 											</h4>
-
 											<?php if ( has_post_thumbnail() ) : ?>
 												<img src="<?php echo get_the_post_thumbnail_url( $post_id, 'large' ); ?>" class="production-thumbnail" />
 											<?php endif; ?>
+											</a>	
 
 											<div class="production-date"><?php echo $dates; ?></div>
 										</div>	
