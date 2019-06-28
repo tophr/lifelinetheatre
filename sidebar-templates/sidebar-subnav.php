@@ -28,7 +28,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 			$parentId = $post->post_parent;
 			$linkToParent = get_permalink($parentId);
-			$parent_title = get_the_title( $post->post_parent );
+			$parent_title_short = get_field('menu_title', $parentId);
+			if ($parent_title_short ) {
+				$parent_title = $parent_title_short;
+			} else {
+				$parent_title = get_the_title( $post->post_parent );
+			}			
 			
 			echo '<li class="page_item parent_page"><a href="' . esc_url( get_permalink( $post->post_parent ) ) . '" alt="' . esc_attr( $parent_title ) . '">' . $parent_title . '</a>';
 			
@@ -48,7 +53,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		} else {
 			global $post;
 			
-			$page_title = get_the_title( $post->ID );
+			$menu_title = get_field('menu_title', $post->ID);
+			if ($menu_title) {
+				$page_title = $menu_title;
+			} else {
+				$page_title = get_the_title( $post->ID );
+			}				
+			
 			echo "<li class='page_item parent_page current_page_item'><a href='#'>" . esc_attr( $page_title ) . "</a></li>"; 
 			
 			$current_page_parent = ( $post->post_parent ? $post->post_parent : $post->ID );
