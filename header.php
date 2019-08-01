@@ -23,6 +23,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 </head>
 
 <body <?php body_class(); ?>>
+	
+<?php include_once("inc/analytics.php") ?>		
 
 <div class="site" id="page">
 	
