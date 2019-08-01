@@ -29,10 +29,11 @@ $image = get_field( 'headshot' );
 
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classname); ?>-row">
+	<a name="<?php print str_replace(' ', '-', strtolower($name)); ?>"></a>
 	<div class="bio-image">
 		<img src="<?php echo $image['url']; ?>" alt="" class="headshot" />
 	</div>
-	<div class="bio-content"> 
+	<div class="bio-content">
 		<h3 classs="bio-name"><?php echo $name; ?> <?php if ($title) { ?><span class="title">(<?php echo $title; ?>)</span><?php }; ?></h3> 
 		<div class="bio-content"><?php echo $text; ?></div>
 	</div>	
