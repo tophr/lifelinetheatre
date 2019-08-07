@@ -4,8 +4,14 @@
 	max-width: 1400px;
 }
 
-.dropdown:hover>.dropdown-menu {
-  //display: block;
+.dropdown-menu {
+	margin-top: 0;
+}
+
+@media (min-width: 768px) {
+	.dropdown:hover>.dropdown-menu {
+	  display: block;
+	}	
 }
 
 .bg-fade {

@@ -7052,7 +7052,7 @@
 (function($) {
 	
 // Flyout Menus	
-
+/*
 $('#main-menu > .dropdown > .dropdown-menu > .dropdown > a').on("click", function(e) {
     var submenu = $(this);
 	console.log('this');
@@ -7065,12 +7065,13 @@ $('.dropdown').on("hidden.bs.dropdown", function() {
 	console.log('that');
     // hide any open menus when parent closes
     $('.dropdown-menu.show').removeClass('show');
-});
-	
-	
-/*function toggleDropdown (e) {
-  const _d = $(e.target).closest('.dropdown'),
+});*/
+		/*
+function toggleDropdown (e) {
+  //const _d = $(e.target).closest('.dropdown'),
+	const _d = $('this'),
     _m = $('.dropdown-menu', _d);
+	console.log(_d);
   setTimeout(function(){
     const shouldOpen = e.type !== 'click' && _d.is(':hover');
     _m.toggleClass('show', shouldOpen);
@@ -7081,7 +7082,6 @@ $('.dropdown').on("hidden.bs.dropdown", function() {
 
 $('body')
   .on('mouseenter mouseleave','.dropdown',toggleDropdown)
-  .on('click', '.dropdown-menu a', toggleDropdown);	
-*/		
+  .on('click', '.dropdown-menu a', toggleDropdown);	*/		
 	
 })( jQuery );	
