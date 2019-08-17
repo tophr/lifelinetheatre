@@ -102,7 +102,8 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 
 		// Check and setup theme default settings.
 		understrap_setup_theme_default_settings();
-
+		
+		add_image_size( 'large-square', 510, 510, true );
 	}
 }
 
