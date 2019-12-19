@@ -52,11 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           </div>
 
           <div class="col-sm-8 text-right header-info">
-            <?php dynamic_sidebar( 'right-header' ); ?>
-            <div class="social-links">
-              <a href="http://visitor.r20.constantcontact.com/d.jsp?llr=dmdmnpbab&p=oi&m=1101102714243&sit=rvw8sq8ab" target="_blank" title="Join our email list"><i class="fas fa-envelope-square"></i></a>
-              <a href="http://www.facebook.com/pages/Lifeline-Theatre/55661357652" target="_blank" title="Find us on Facebook!"><i class="fab fa-facebook"></i></a> <a href="http://twitter.com/lifelinetheatre" target="_blank"  title="Follow us on Twitter" ><i class="fab fa-twitter-square"></i></a>
-            </div>            
+            <?php dynamic_sidebar( 'right-header' ); ?>           
           </div>
 
         </div>
